@@ -2,6 +2,7 @@ package com.lmgy.qrcodelogin.controller;
 
 import com.lmgy.qrcodelogin.entity.Message;
 import com.lmgy.qrcodelogin.service.ILoginService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
  * @date 2019/11/15
  */
 @Controller
+@Slf4j
 @RequestMapping(value = "/login")
 public class LoginController {
 
@@ -23,6 +25,8 @@ public class LoginController {
     @RequestMapping(value = "")
     @ResponseBody
     public Message loginById(String userId, String userPassword) {
+        log.info("userId" + userId);
+        log.info("pwd" + userPassword);
         return loginService.checkPassword(userId, userPassword);
     }
 

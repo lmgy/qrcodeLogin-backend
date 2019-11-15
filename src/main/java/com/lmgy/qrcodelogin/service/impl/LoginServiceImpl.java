@@ -4,6 +4,7 @@ import com.lmgy.qrcodelogin.entity.Message;
 import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.repository.UserRepository;
 import com.lmgy.qrcodelogin.service.ILoginService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  * @date 2019/11/15
  */
 @Service
+@Slf4j
 public class LoginServiceImpl implements ILoginService {
 
     @Autowired
@@ -21,6 +23,7 @@ public class LoginServiceImpl implements ILoginService {
     public Message checkPassword(String userId, String userPassword) {
 //        User user = userDao.getUserInfo(userId);
         User user = userRepository.getUserByUserId(userId);
+        log.info("user = " + user.getUserPassword());
         if (null == userPassword) {
             return new Message(201, "登录失败", new User());
         }
@@ -37,7 +40,8 @@ public class LoginServiceImpl implements ILoginService {
     public Message getUserInfo(String userId) {
 //        User user = userDao.getUserInfo(userId);
         User user = userRepository.getUserByUserId(userId);
-        if (null == user) {
+        log.info("user = " + user.getUserPassword());
+        if (user == null) {
             return new Message(201, "获取用户信息失败", new User());
         }
         return new Message(200, "获取用户信息成功", user);

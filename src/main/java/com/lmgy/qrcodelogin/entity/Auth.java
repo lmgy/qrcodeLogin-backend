@@ -32,6 +32,6 @@ public class Auth {
     @Column(nullable = false, name = "auth_address")
     private String authAddress;
     @Column(nullable = false, name = "auth_state")
-    private Integer authState;
+    private int authState;
 
 }

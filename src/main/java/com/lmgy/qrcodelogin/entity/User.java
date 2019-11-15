@@ -21,7 +21,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column(nullable = false, name = "user_id")
-    private long userId;
+    private String userId;
     @Column(nullable = false, name = "user_password")
     private String userPassword;
     @Column(name = "user_name")
@@ -29,6 +29,6 @@ public class User {
     @Column(name = "user_avatar")
     private String userAvatar;
     @Column(name = "user_phone")
-    private long userPhone;
+    private String userPhone;
 
 }
