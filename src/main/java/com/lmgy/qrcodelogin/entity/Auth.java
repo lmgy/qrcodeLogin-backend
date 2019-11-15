@@ -12,6 +12,7 @@ import java.sql.Timestamp;
  * @date 2019/11/15
  */
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "auth")
@@ -32,11 +33,5 @@ public class Auth {
     private String authAddress;
     @Column(nullable = false, name = "auth_state")
     private Integer authState;
-
-    public Auth(String authToken, String authIp, String authAddress){
-        this.authToken = authToken;
-        this.authIp = authIp;
-        this.authAddress = authAddress;
-    }
 
 }

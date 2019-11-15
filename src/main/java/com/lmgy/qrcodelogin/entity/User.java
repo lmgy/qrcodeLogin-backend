@@ -24,11 +24,11 @@ public class User {
     private long userId;
     @Column(nullable = false, name = "user_password")
     private String userPassword;
-    @Column(nullable = false, name = "user_name")
+    @Column(name = "user_name")
     private String userName;
-    @Column(nullable = false, name = "user_avatar")
+    @Column(name = "user_avatar")
     private String userAvatar;
-    @Column(nullable = false, name = "user_phone")
+    @Column(name = "user_phone")
     private long userPhone;
 
 }

@@ -8,8 +8,11 @@ import com.lmgy.qrcodelogin.service.IAuthService;
 import com.lmgy.qrcodelogin.util.HttpUtil;
 import com.lmgy.qrcodelogin.util.IPUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -17,6 +20,7 @@ import java.util.UUID;
  * @author lmgy
  * @date 2019/11/15
  */
+@Service
 public class AuthServiceImpl implements IAuthService {
 
     @Autowired
@@ -52,8 +56,15 @@ public class AuthServiceImpl implements IAuthService {
             address = "江苏省南京市"; // 获取baidu接口数据失败
         }
         // 将token相关信息存入数据库中
-        authRepository.save(new Auth(token, ip, address));
-//        authRepository.addAuthInfo(token, ip, address);
+        Auth auth = new Auth();
+        auth.setUserId("");
+        auth.setAuthToken(token);
+        auth.setAuthIp(ip);
+        auth.setAuthAddress(address);
+        auth.setAuthState(0);
+        auth.setAuthAddress("");
+        auth.setAuthTime(new Timestamp(System.currentTimeMillis()));
+        authRepository.save(auth);
         // 将token返回给客户端
         return new Message(200, "获取口令成功", token);
     }
