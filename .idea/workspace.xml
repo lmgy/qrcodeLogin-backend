@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66d602ab-a6ca-4535-8c75-c9bdd2f27e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/repository/AuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/IAuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/ILoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qrcodelogin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/qrcodelogin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/entity/User.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -32,6 +48,7 @@
   <component name="ProjectId" id="1TdPB8LozycznZ9jDEGIRCtVbXB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -71,7 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573786860137</updated>
-      <workItem from="1573786864700" duration="3261000" />
+      <workItem from="1573786864700" duration="3924000" />
+      <workItem from="1573801738914" duration="5331000" />
     </task>
     <servers />
   </component>
@@ -83,7 +101,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
