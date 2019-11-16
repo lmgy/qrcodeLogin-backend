@@ -42,16 +42,16 @@ public class AuthController {
     }
 
     //客户端和手机端获取token相关信息
-    @RequestMapping(value = "/info/{token}")
+    @RequestMapping(value = "/info")
     @ResponseBody
-    public Message infoToken(@PathVariable("token") String token, String userId, boolean isScan) {
+    public Message infoToken(String token, String userId, boolean isScan) {
         return authService.getAuthInfo(token, userId, isScan);
     }
 
     // 手机端使用token进行验证
-    @RequestMapping(value = "/use/{token}")
+    @RequestMapping(value = "/use")
     @ResponseBody
-    public Message useToken(@PathVariable("token") String token, String userId) {
+    public Message useToken(String token, String userId) {
         return authService.setAuthState(token, userId);
     }
 
