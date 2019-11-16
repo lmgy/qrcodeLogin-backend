@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66d602ab-a6ca-4535-8c75-c9bdd2f27e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +87,8 @@
       <workItem from="1573801738914" duration="16542000" />
       <workItem from="1573830308950" duration="3348000" />
       <workItem from="1573834225075" duration="116000" />
-      <workItem from="1573834371907" duration="954000" />
+      <workItem from="1573834371907" duration="1239000" />
+      <workItem from="1573871398882" duration="871000" />
     </task>
     <servers />
   </component>

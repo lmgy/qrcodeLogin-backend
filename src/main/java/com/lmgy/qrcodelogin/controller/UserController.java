@@ -28,7 +28,6 @@ public class UserController {
         return userService.changePassword(userId, newPassword);
     }
 
-
     @RequestMapping(value = "changeAvatar")
     @ResponseBody
     public Message changeAvatar(String userId, String avatarLink) {
