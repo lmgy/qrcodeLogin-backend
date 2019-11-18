@@ -1,10 +1,12 @@
 package com.lmgy.qrcodelogin.controller;
 
 import com.lmgy.qrcodelogin.entity.Message;
-import com.lmgy.qrcodelogin.service.ILoginService;
+import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -32,6 +34,13 @@ public class UserController {
     @ResponseBody
     public Message changeAvatar(String userId, String avatarLink) {
         return userService.changeAvatar(userId, avatarLink);
+    }
+
+
+    @PostMapping(value = "reg")
+    @ResponseBody
+    public Message registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
     }
 
 }

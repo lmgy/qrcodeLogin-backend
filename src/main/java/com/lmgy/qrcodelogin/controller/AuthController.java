@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2019/11/15
  */
 @Controller
-@RequestMapping(value = "auth")
+@RequestMapping(value = "/auth")
 public class AuthController {
 
     @Resource

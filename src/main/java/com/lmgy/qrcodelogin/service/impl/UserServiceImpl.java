@@ -33,4 +33,10 @@ public class UserServiceImpl implements IUserService {
         return new Message(200, "修改成功", user);
     }
 
+    @Override
+    public Message registerUser(User user) {
+        User ret = userRepository.save(user);
+        return new Message(200, "注册成功", ret);
+    }
+
 }
