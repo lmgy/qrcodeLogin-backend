@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66d602ab-a6ca-4535-8c75-c9bdd2f27e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/util/MD5Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lmgy/qrcodelogin/service/impl/LoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +41,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文本文档 (5).php" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -97,7 +95,14 @@
       <workItem from="1573917639905" duration="1192000" />
       <workItem from="1573950797913" duration="8928000" />
       <workItem from="1573976019828" duration="2246000" />
-      <workItem from="1574066151896" duration="3608000" />
+      <workItem from="1574066151896" duration="5567000" />
+      <workItem from="1574141656189" duration="2391000" />
+      <workItem from="1574163437054" duration="639000" />
+      <workItem from="1574214159672" duration="4626000" />
+      <workItem from="1574265403794" duration="1231000" />
+      <workItem from="1574337520156" duration="61000" />
+      <workItem from="1574337614868" duration="404000" />
+      <workItem from="1574338322509" duration="3686000" />
     </task>
     <servers />
   </component>

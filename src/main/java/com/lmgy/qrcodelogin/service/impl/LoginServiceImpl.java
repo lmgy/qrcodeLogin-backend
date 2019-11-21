@@ -35,7 +35,6 @@ public class LoginServiceImpl implements ILoginService {
     @Override
     public Message getUserInfo(String userId) {
         User user = userRepository.getUserByUserId(userId);
-        log.info("user = " + user.getUserPassword());
         return new Message(200, "获取用户信息成功", user);
     }
 
