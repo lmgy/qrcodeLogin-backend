@@ -5,6 +5,7 @@ import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.repository.UserRepository;
 import com.lmgy.qrcodelogin.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,6 +17,9 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    private Environment environment;
 
     @Override
     public Message changePassword(String userId, String newPassword) {
@@ -35,6 +39,9 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public Message registerUser(User user) {
+        if(user.getUserAvatar().isEmpty()){
+            user.setUserAvatar(environment.getProperty("default.avatar"));
+        }
         User ret = userRepository.save(user);
         return new Message(200, "注册成功", ret);
     }
