@@ -4,6 +4,7 @@ import com.lmgy.qrcodelogin.entity.Message;
 import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.repository.UserRepository;
 import com.lmgy.qrcodelogin.service.IUserService;
+import com.lmgy.qrcodelogin.util.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,9 @@ public class UserServiceImpl implements IUserService {
     public Message registerUser(User user) {
         if(user.getUserAvatar().isEmpty()){
             user.setUserAvatar(environment.getProperty("default.avatar"));
+        }
+        if(user.getUserName().isEmpty()){
+            user.setUserName(UUIDUtil.uuid());
         }
         User ret = userRepository.save(user);
         return new Message(200, "注册成功", ret);

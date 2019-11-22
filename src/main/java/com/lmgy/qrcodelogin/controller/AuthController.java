@@ -58,4 +58,13 @@ public class AuthController {
         return authService.setAuthState(token, userId);
     }
 
+
+    // 取消token验证
+    @RequestMapping(value = "/cancel")
+    @ResponseBody
+    public Message cancelAuth(String token, String userId) {
+        return authService.cancelAuth(token, userId);
+    }
+
+
 }

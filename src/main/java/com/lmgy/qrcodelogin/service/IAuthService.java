@@ -16,4 +16,6 @@ public interface IAuthService {
 
     Message setAuthState(String authToken, String userId);
 
+    Message cancelAuth(String authToken, String userId);
+
 }
