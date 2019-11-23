@@ -25,7 +25,11 @@ public class AuthController {
     @Resource
     IAuthService authService;
 
-    // 客户端获取token
+    /**
+     * 客户端获取token
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/token")
     @ResponseBody
     public Message getToken(HttpServletRequest request) {
@@ -33,7 +37,11 @@ public class AuthController {
         return authService.addAuthInfo(request);
     }
 
-    //token对应的二维码图像
+    /**
+     * token对应的二维码图像
+     * @param token
+     * @param response
+     */
     @RequestMapping(value = "/img/{token}")
     public void getQRCodeImg(@PathVariable("token") String token, HttpServletResponse response) {
         try {
@@ -44,14 +52,25 @@ public class AuthController {
         }
     }
 
-    //客户端和手机端获取token相关信息
+    /**
+     * 客户端和手机端获取token相关信息
+     * @param token
+     * @param userId
+     * @param isScan
+     * @return
+     */
     @RequestMapping(value = "/info")
     @ResponseBody
     public Message infoToken(String token, String userId, boolean isScan) {
         return authService.getAuthInfo(token, userId, isScan);
     }
 
-    // 手机端使用token进行验证
+    /**
+     * 手机端使用token进行验证
+     * @param token
+     * @param userId
+     * @return
+     */
     @RequestMapping(value = "/use")
     @ResponseBody
     public Message useToken(String token, String userId) {
@@ -59,7 +78,12 @@ public class AuthController {
     }
 
 
-    // 取消token验证
+    /**
+     * 取消token验证
+     * @param token
+     * @param userId
+     * @return
+     */
     @RequestMapping(value = "/cancel")
     @ResponseBody
     public Message cancelAuth(String token, String userId) {

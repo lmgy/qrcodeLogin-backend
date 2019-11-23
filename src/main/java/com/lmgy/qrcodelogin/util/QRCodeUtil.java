@@ -24,11 +24,17 @@ public class QRCodeUtil {
 
     private static final String CHARSET = "utf-8";
     private static final String FORMAT_NAME = "JPG";
-    // 二维码尺寸
+    /**
+     * 二维码尺寸
+     */
     private static final int QRCODE_SIZE = 400;
-    // LOGO宽度
+    /**
+     * LOGO宽度
+     */
     private static final int WIDTH = 80;
-    // LOGO高度
+    /**
+     * LOGO高度
+     */
     private static final int HEIGHT = 80;
 
     private static BufferedImage createImage(String content, String imgPath,
@@ -102,7 +108,8 @@ public class QRCodeUtil {
         if (src != null) {
             int width = src.getWidth(null);
             int height = src.getHeight(null);
-            if (needCompress) { // 压缩LOGO
+            // 压缩LOGO
+            if (needCompress) {
                 if (width > WIDTH) {
                     width = WIDTH;
                 }
@@ -114,7 +121,8 @@ public class QRCodeUtil {
                 BufferedImage tag = new BufferedImage(width, height,
                         BufferedImage.TYPE_INT_RGB);
                 Graphics g = tag.getGraphics();
-                g.drawImage(image, 0, 0, null); // 绘制缩小后的图
+                // 绘制缩小后的图
+                g.drawImage(image, 0, 0, null);
                 g.dispose();
                 src = image;
             }

@@ -15,7 +15,7 @@ public class MainController {
     @RequestMapping(value = "")
     @ResponseBody
     public String main() {
-        return "This is TRUNCH";
+        return "test";
     }
 
 }

@@ -21,7 +21,12 @@ public class LoginController {
     @Resource
     ILoginService loginService;
 
-    // 登录，成功返回用户信息
+    /**
+     * 登录，成功返回用户信息
+     * @param userId
+     * @param userPassword
+     * @return
+     */
     @RequestMapping(value = "")
     @ResponseBody
     public Message loginById(String userId, String userPassword) {
@@ -30,7 +35,11 @@ public class LoginController {
         return loginService.checkPassword(userId, userPassword);
     }
 
-    // 获取用户信息
+    /**
+     * 获取用户信息
+     * @param userId
+     * @return
+     */
     @RequestMapping(value = "getUser")
     @ResponseBody
     public Message getUserInfo(String userId) {
