@@ -4,6 +4,7 @@ import com.lmgy.qrcodelogin.entity.Message;
 import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.repository.UserRepository;
 import com.lmgy.qrcodelogin.service.IUserService;
+import com.lmgy.qrcodelogin.util.MD5Util;
 import com.lmgy.qrcodelogin.util.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -46,6 +47,9 @@ public class UserServiceImpl implements IUserService {
         if(user.getUserName().isEmpty()){
             user.setUserName(UUIDUtil.uuid());
         }
+        String dbSalt = "12wn57fae12";
+        String calPass = MD5Util.formPassToDb(user.getUserPassword(), dbSalt);
+        user.setUserPassword(calPass);
         User ret = userRepository.save(user);
         return new Message(200, "注册成功", ret);
     }

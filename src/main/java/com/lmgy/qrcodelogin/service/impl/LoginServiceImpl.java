@@ -4,6 +4,7 @@ import com.lmgy.qrcodelogin.entity.Message;
 import com.lmgy.qrcodelogin.entity.User;
 import com.lmgy.qrcodelogin.repository.UserRepository;
 import com.lmgy.qrcodelogin.service.ILoginService;
+import com.lmgy.qrcodelogin.util.MD5Util;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,10 @@ public class LoginServiceImpl implements ILoginService {
         if (null == userPassword) {
             return new Message(201, "登录失败", new User());
         }
-        if (!userPassword.equals(user.getUserPassword())) {
+        String dbPass = user.getUserPassword();
+        String dbSalt = "12wn57fae12";
+        String calPass = MD5Util.formPassToDb(userPassword, dbSalt);
+        if (!calPass.equals(dbPass)) {
             return new Message(203, "登录失败", new User());
         }
         return new Message(200, "登录成功", user);
